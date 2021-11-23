@@ -4,8 +4,9 @@
 target 'SOT-iOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-pod 'SnapKit'
-pod 'Then'
-  # Pods for SOT-iOS
 
+  # Pods for SOT-iOS
+pod 'SnapKit', '~> 5.0.0'
+pod 'Then'
+pod 'Alamofire', '~> 5.4'
 end

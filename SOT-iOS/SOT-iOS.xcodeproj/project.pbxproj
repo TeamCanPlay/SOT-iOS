@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13C34BEEE8717C4F433044FC /* Pods_SOT_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */; };
+		3930EA799056B99699750013 /* Pods_SOT_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */; };
 		40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */; };
 		40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */; };
 		40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B97030274D478800DD6DF2 /* CameraManager.swift */; };
@@ -19,9 +19,19 @@
 		40C9E58A274C060D00F73EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E588274C060D00F73EA9 /* LaunchScreen.storyboard */; };
 		40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B5274CDD2400986F33 /* UIColorExtension.swift */; };
 		40F284B8274CDEB900986F33 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B7274CDEB900986F33 /* UIFontExtension.swift */; };
+		A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D1274C0F1B006E61DC /* PlayerView.swift */; };
+		A8D856D5274C1623006E61DC /* AVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */; };
+		A8D856D8274C190F006E61DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D7274C190F006E61DC /* HomeViewModel.swift */; };
+		A8D856DC274C2EA6006E61DC /* VideoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */; };
+		A8D856DF274C31C9006E61DC /* ActivityVideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */; };
+		A8D856E1274C3275006E61DC /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E0274C3275006E61DC /* Videos.swift */; };
+		A8D856E3274C37E6006E61DC /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E2274C37E6006E61DC /* VideoCell.swift */; };
+		A8D856E5274C3C53006E61DC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E4274C3C53006E61DC /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOT_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoFirstViewController.swift; sourceTree = "<group>"; };
 		40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoSecondViewController.swift; sourceTree = "<group>"; };
 		40B97030274D478800DD6DF2 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -35,9 +45,15 @@
 		40C9E58B274C060D00F73EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40F284B5274CDD2400986F33 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		40F284B7274CDEB900986F33 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
-		72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOT_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A8D856D1274C0F1B006E61DC /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerExtension.swift; sourceTree = "<group>"; };
+		A8D856D7274C190F006E61DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIManager.swift; sourceTree = "<group>"; };
+		A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVideoRequest.swift; sourceTree = "<group>"; };
+		A8D856E0274C3275006E61DC /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		A8D856E2274C37E6006E61DC /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		A8D856E4274C3C53006E61DC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C34BEEE8717C4F433044FC /* Pods_SOT_iOS.framework in Frameworks */,
+				3930EA799056B99699750013 /* Pods_SOT_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +84,8 @@
 			children = (
 				40C9E57C274C060B00F73EA9 /* SOT-iOS */,
 				40C9E57B274C060B00F73EA9 /* Products */,
-				5AE033FB8D835CEF5A85AA2D /* Pods */,
-				A21CFBFAFF428C0B50C482F9 /* Frameworks */,
+				A595D93B8A5002B017CE0DC3 /* Pods */,
+				6D5C013A441D936876B022E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +118,7 @@
 		40C9E592274C06B700F73EA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8D856D3274C1602006E61DC /* Extensions */,
 				40C9E586274C060D00F73EA9 /* Assets.xcassets */,
 				40F284B5274CDD2400986F33 /* UIColorExtension.swift */,
 				40F284B7274CDEB900986F33 /* UIFontExtension.swift */,
@@ -124,26 +141,121 @@
 			isa = PBXGroup;
 			children = (
 				40C4FD44274CE6AC009EA8C1 /* UploadVideo */,
-				40C9E581274C060B00F73EA9 /* HomeViewController.swift */,
+				A866855A274C0B4800D2B9BD /* Network */,
+				A8668559274C0B4200D2B9BD /* Model */,
+				A8668557274C0B2200D2B9BD /* View */,
+				A8668558274C0B3A00D2B9BD /* ViewModel */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		5AE033FB8D835CEF5A85AA2D /* Pods */ = {
+		6D5C013A441D936876B022E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */,
-				FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */,
+				206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A595D93B8A5002B017CE0DC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */,
+				53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A21CFBFAFF428C0B50C482F9 /* Frameworks */ = {
+		A8668557274C0B2200D2B9BD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */,
+				A866855B274C0B6B00D2B9BD /* Home */,
 			);
-			name = Frameworks;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8668558274C0B3A00D2B9BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D6274C18F9006E61DC /* Home */,
+				A8D856E4274C3C53006E61DC /* Observable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A8668559274C0B4200D2B9BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DD274C318F006E61DC /* Home */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A866855A274C0B4800D2B9BD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A866855B274C0B6B00D2B9BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856CE274C0EB6006E61DC /* Controller */,
+				A8D856D0274C0EDD006E61DC /* Views */,
+				A8D856CF274C0ED1006E61DC /* Cell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8D856CE274C0EB6006E61DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40C9E581274C060B00F73EA9 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8D856CF274C0ED1006E61DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856E2274C37E6006E61DC /* VideoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A8D856D0274C0EDD006E61DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D1274C0F1B006E61DC /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8D856D3274C1602006E61DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8D856D6274C18F9006E61DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D7274C190F006E61DC /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8D856DD274C318F006E61DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */,
+				A8D856E0274C3275006E61DC /* Videos.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40C9E58E274C060D00F73EA9 /* Build configuration list for PBXNativeTarget "SOT-iOS" */;
 			buildPhases = (
-				A38E26C1B28F22714E921B34 /* [CP] Check Pods Manifest.lock */,
+				B3B615814692AB614DC5C746 /* [CP] Check Pods Manifest.lock */,
 				40C9E576274C060A00F73EA9 /* Sources */,
 				40C9E577274C060A00F73EA9 /* Frameworks */,
 				40C9E578274C060A00F73EA9 /* Resources */,
-				0D327AA9C29E63D3445AF65C /* [CP] Embed Pods Frameworks */,
+				3C01816B4C16D26A36F0647F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +325,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D327AA9C29E63D3445AF65C /* [CP] Embed Pods Frameworks */ = {
+		3C01816B4C16D26A36F0647F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,7 +342,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A38E26C1B28F22714E921B34 /* [CP] Check Pods Manifest.lock */ = {
+		B3B615814692AB614DC5C746 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,15 +371,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D856DF274C31C9006E61DC /* ActivityVideoRequest.swift in Sources */,
 				40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */,
 				40F284B8274CDEB900986F33 /* UIFontExtension.swift in Sources */,
-				40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */,
-				40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */,
 				40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */,
 				40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */,
 				40C4FD49274CEF6B009EA8C1 /* MediaPlayerView.swift in Sources */,
 				40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */,
 				40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */,
+				A8D856E1274C3275006E61DC /* Videos.swift in Sources */,
+				A8D856E5274C3C53006E61DC /* Observable.swift in Sources */,
+				A8D856D8274C190F006E61DC /* HomeViewModel.swift in Sources */,
+				A8D856D5274C1623006E61DC /* AVPlayerExtension.swift in Sources */,
+				A8D856DC274C2EA6006E61DC /* VideoAPIManager.swift in Sources */,
+				A8D856E3274C37E6006E61DC /* VideoCell.swift in Sources */,
+				40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */,
+				40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */,
+				A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,10 +523,11 @@
 		};
 		40C9E58F274C060D00F73EA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */;
+			baseConfigurationReference = 21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = "SOT-iOS/Application/Info.plist";
@@ -417,6 +538,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -424,10 +546,11 @@
 		};
 		40C9E590274C060D00F73EA9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */;
+			baseConfigurationReference = 53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = "SOT-iOS/Application/Info.plist";
@@ -438,6 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
