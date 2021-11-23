@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13C34BEEE8717C4F433044FC /* Pods_SOT_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */; };
+		40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */; };
+		40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */; };
+		40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B97030274D478800DD6DF2 /* CameraManager.swift */; };
+		40C4FD49274CEF6B009EA8C1 /* MediaPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C4FD48274CEF6B009EA8C1 /* MediaPlayerView.swift */; };
 		40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E57D274C060B00F73EA9 /* AppDelegate.swift */; };
 		40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E57F274C060B00F73EA9 /* SceneDelegate.swift */; };
 		40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E581274C060B00F73EA9 /* HomeViewController.swift */; };
 		40C9E587274C060D00F73EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E586274C060D00F73EA9 /* Assets.xcassets */; };
 		40C9E58A274C060D00F73EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E588274C060D00F73EA9 /* LaunchScreen.storyboard */; };
+		40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B5274CDD2400986F33 /* UIColorExtension.swift */; };
+		40F284B8274CDEB900986F33 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B7274CDEB900986F33 /* UIFontExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoFirstViewController.swift; sourceTree = "<group>"; };
+		40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoSecondViewController.swift; sourceTree = "<group>"; };
+		40B97030274D478800DD6DF2 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		40C4FD48274CEF6B009EA8C1 /* MediaPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerView.swift; sourceTree = "<group>"; };
 		40C9E57A274C060B00F73EA9 /* SOT-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOT-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C9E57D274C060B00F73EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40C9E57F274C060B00F73EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +33,11 @@
 		40C9E586274C060D00F73EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C9E589274C060D00F73EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C9E58B274C060D00F73EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F284B5274CDD2400986F33 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		40F284B7274CDEB900986F33 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOT_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +45,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C34BEEE8717C4F433044FC /* Pods_SOT_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40C4FD44274CE6AC009EA8C1 /* UploadVideo */ = {
+			isa = PBXGroup;
+			children = (
+				40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */,
+				40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */,
+				40C4FD48274CEF6B009EA8C1 /* MediaPlayerView.swift */,
+				40B97030274D478800DD6DF2 /* CameraManager.swift */,
+			);
+			path = UploadVideo;
+			sourceTree = "<group>";
+		};
 		40C9E571274C060A00F73EA9 = {
 			isa = PBXGroup;
 			children = (
 				40C9E57C274C060B00F73EA9 /* SOT-iOS */,
 				40C9E57B274C060B00F73EA9 /* Products */,
+				5AE033FB8D835CEF5A85AA2D /* Pods */,
+				A21CFBFAFF428C0B50C482F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				40C9E586274C060D00F73EA9 /* Assets.xcassets */,
+				40F284B5274CDD2400986F33 /* UIColorExtension.swift */,
+				40F284B7274CDEB900986F33 /* UIFontExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -91,9 +123,27 @@
 		40C9E594274C06CA00F73EA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				40C4FD44274CE6AC009EA8C1 /* UploadVideo */,
 				40C9E581274C060B00F73EA9 /* HomeViewController.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		5AE033FB8D835CEF5A85AA2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */,
+				FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A21CFBFAFF428C0B50C482F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83959043B4C2305D6485BE8C /* Pods_SOT_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40C9E58E274C060D00F73EA9 /* Build configuration list for PBXNativeTarget "SOT-iOS" */;
 			buildPhases = (
+				A38E26C1B28F22714E921B34 /* [CP] Check Pods Manifest.lock */,
 				40C9E576274C060A00F73EA9 /* Sources */,
 				40C9E577274C060A00F73EA9 /* Frameworks */,
 				40C9E578274C060A00F73EA9 /* Resources */,
+				0D327AA9C29E63D3445AF65C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,14 +212,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D327AA9C29E63D3445AF65C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A38E26C1B28F22714E921B34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOT-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40C9E576274C060A00F73EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */,
+				40F284B8274CDEB900986F33 /* UIFontExtension.swift in Sources */,
 				40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */,
 				40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */,
+				40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */,
+				40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */,
+				40C4FD49274CEF6B009EA8C1 /* MediaPlayerView.swift in Sources */,
+				40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */,
+				40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,18 +403,19 @@
 		};
 		40C9E58F274C060D00F73EA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B43A163BA7407ACEBA14A5 /* Pods-SOT-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TAJ2UVSWN;
-				INFOPLIST_FILE = "SOT-iOS/Info.plist";
+				DEVELOPMENT_TEAM = 69F5355JYF;
+				INFOPLIST_FILE = "SOT-iOS/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SJHAN.SOT-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,18 +424,19 @@
 		};
 		40C9E590274C060D00F73EA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB2C7E4EB964F166E552876 /* Pods-SOT-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TAJ2UVSWN;
-				INFOPLIST_FILE = "SOT-iOS/Info.plist";
+				DEVELOPMENT_TEAM = 69F5355JYF;
+				INFOPLIST_FILE = "SOT-iOS/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SJHAN.SOT-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
