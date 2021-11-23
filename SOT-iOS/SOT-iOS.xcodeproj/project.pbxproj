@@ -3,18 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3930EA799056B99699750013 /* Pods_SOT_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */; };
 		40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E57D274C060B00F73EA9 /* AppDelegate.swift */; };
 		40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E57F274C060B00F73EA9 /* SceneDelegate.swift */; };
 		40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E581274C060B00F73EA9 /* HomeViewController.swift */; };
 		40C9E587274C060D00F73EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E586274C060D00F73EA9 /* Assets.xcassets */; };
 		40C9E58A274C060D00F73EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E588274C060D00F73EA9 /* LaunchScreen.storyboard */; };
+		A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D1274C0F1B006E61DC /* PlayerView.swift */; };
+		A8D856D5274C1623006E61DC /* AVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */; };
+		A8D856D8274C190F006E61DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D7274C190F006E61DC /* HomeViewModel.swift */; };
+		A8D856DC274C2EA6006E61DC /* VideoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */; };
+		A8D856DF274C31C9006E61DC /* ActivityVideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */; };
+		A8D856E1274C3275006E61DC /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E0274C3275006E61DC /* Videos.swift */; };
+		A8D856E3274C37E6006E61DC /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E2274C37E6006E61DC /* VideoCell.swift */; };
+		A8D856E5274C3C53006E61DC /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856E4274C3C53006E61DC /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOT_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		40C9E57A274C060B00F73EA9 /* SOT-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOT-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C9E57D274C060B00F73EA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40C9E57F274C060B00F73EA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +33,15 @@
 		40C9E586274C060D00F73EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C9E589274C060D00F73EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C9E58B274C060D00F73EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A8D856D1274C0F1B006E61DC /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerExtension.swift; sourceTree = "<group>"; };
+		A8D856D7274C190F006E61DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAPIManager.swift; sourceTree = "<group>"; };
+		A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVideoRequest.swift; sourceTree = "<group>"; };
+		A8D856E0274C3275006E61DC /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		A8D856E2274C37E6006E61DC /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		A8D856E4274C3C53006E61DC /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3930EA799056B99699750013 /* Pods_SOT_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +61,8 @@
 			children = (
 				40C9E57C274C060B00F73EA9 /* SOT-iOS */,
 				40C9E57B274C060B00F73EA9 /* Products */,
+				A595D93B8A5002B017CE0DC3 /* Pods */,
+				6D5C013A441D936876B022E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +95,7 @@
 		40C9E592274C06B700F73EA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8D856D3274C1602006E61DC /* Extensions */,
 				40C9E586274C060D00F73EA9 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -91,9 +115,121 @@
 		40C9E594274C06CA00F73EA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				40C9E581274C060B00F73EA9 /* HomeViewController.swift */,
+				A866855A274C0B4800D2B9BD /* Network */,
+				A8668559274C0B4200D2B9BD /* Model */,
+				A8668557274C0B2200D2B9BD /* View */,
+				A8668558274C0B3A00D2B9BD /* ViewModel */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		6D5C013A441D936876B022E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A595D93B8A5002B017CE0DC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */,
+				53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A8668557274C0B2200D2B9BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A866855B274C0B6B00D2B9BD /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8668558274C0B3A00D2B9BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D6274C18F9006E61DC /* Home */,
+				A8D856E4274C3C53006E61DC /* Observable.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A8668559274C0B4200D2B9BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DD274C318F006E61DC /* Home */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A866855A274C0B4800D2B9BD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DB274C2EA6006E61DC /* VideoAPIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A866855B274C0B6B00D2B9BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856CE274C0EB6006E61DC /* Controller */,
+				A8D856D0274C0EDD006E61DC /* Views */,
+				A8D856CF274C0ED1006E61DC /* Cell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8D856CE274C0EB6006E61DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40C9E581274C060B00F73EA9 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8D856CF274C0ED1006E61DC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856E2274C37E6006E61DC /* VideoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A8D856D0274C0EDD006E61DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D1274C0F1B006E61DC /* PlayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8D856D3274C1602006E61DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8D856D6274C18F9006E61DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856D7274C190F006E61DC /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A8D856DD274C318F006E61DC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A8D856DE274C31C9006E61DC /* ActivityVideoRequest.swift */,
+				A8D856E0274C3275006E61DC /* Videos.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40C9E58E274C060D00F73EA9 /* Build configuration list for PBXNativeTarget "SOT-iOS" */;
 			buildPhases = (
+				B3B615814692AB614DC5C746 /* [CP] Check Pods Manifest.lock */,
 				40C9E576274C060A00F73EA9 /* Sources */,
 				40C9E577274C060A00F73EA9 /* Frameworks */,
 				40C9E578274C060A00F73EA9 /* Resources */,
+				3C01816B4C16D26A36F0647F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,14 +298,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C01816B4C16D26A36F0647F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3B615814692AB614DC5C746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SOT-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40C9E576274C060A00F73EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D856DF274C31C9006E61DC /* ActivityVideoRequest.swift in Sources */,
 				40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */,
+				A8D856E1274C3275006E61DC /* Videos.swift in Sources */,
+				A8D856E5274C3C53006E61DC /* Observable.swift in Sources */,
+				A8D856D8274C190F006E61DC /* HomeViewModel.swift in Sources */,
+				A8D856D5274C1623006E61DC /* AVPlayerExtension.swift in Sources */,
+				A8D856DC274C2EA6006E61DC /* VideoAPIManager.swift in Sources */,
+				A8D856E3274C37E6006E61DC /* VideoCell.swift in Sources */,
 				40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */,
 				40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */,
+				A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,19 +491,22 @@
 		};
 		40C9E58F274C060D00F73EA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TAJ2UVSWN;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = "SOT-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SJHAN.SOT-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,19 +514,22 @@
 		};
 		40C9E590274C060D00F73EA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3TAJ2UVSWN;
+				DEVELOPMENT_TEAM = 69F5355JYF;
 				INFOPLIST_FILE = "SOT-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.SJHAN.SOT-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.TeamCanPlay.SOT-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
