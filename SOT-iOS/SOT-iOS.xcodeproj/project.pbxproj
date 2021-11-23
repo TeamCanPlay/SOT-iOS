@@ -17,6 +17,9 @@
 		40C9E582274C060B00F73EA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C9E581274C060B00F73EA9 /* HomeViewController.swift */; };
 		40C9E587274C060D00F73EA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E586274C060D00F73EA9 /* Assets.xcassets */; };
 		40C9E58A274C060D00F73EA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40C9E588274C060D00F73EA9 /* LaunchScreen.storyboard */; };
+		40CC7176274D77F300872CE1 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40CC7173274D77F300872CE1 /* Poppins-Medium.ttf */; };
+		40CC7177274D77F300872CE1 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40CC7174274D77F300872CE1 /* Poppins-Bold.ttf */; };
+		40CC7178274D77F300872CE1 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 40CC7175274D77F300872CE1 /* Poppins-Regular.ttf */; };
 		40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B5274CDD2400986F33 /* UIColorExtension.swift */; };
 		40F284B8274CDEB900986F33 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F284B7274CDEB900986F33 /* UIFontExtension.swift */; };
 		A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D856D1274C0F1B006E61DC /* PlayerView.swift */; };
@@ -43,6 +46,9 @@
 		40C9E586274C060D00F73EA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40C9E589274C060D00F73EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40C9E58B274C060D00F73EA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40CC7173274D77F300872CE1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		40CC7174274D77F300872CE1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		40CC7175274D77F300872CE1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		40F284B5274CDD2400986F33 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		40F284B7274CDEB900986F33 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		53F04EFB7923A7DB1B69AAD3 /* Pods-SOT-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.release.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,10 +77,10 @@
 		40C4FD44274CE6AC009EA8C1 /* UploadVideo */ = {
 			isa = PBXGroup;
 			children = (
+				40CC717A274D78A200872CE1 /* Class */,
+				40CC7179274D789D00872CE1 /* View */,
 				40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */,
 				40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */,
-				40C4FD48274CEF6B009EA8C1 /* MediaPlayerView.swift */,
-				40B97030274D478800DD6DF2 /* CameraManager.swift */,
 			);
 			path = UploadVideo;
 			sourceTree = "<group>";
@@ -103,25 +109,16 @@
 				40C9E593274C06BF00F73EA9 /* Application */,
 				40C9E592274C06B700F73EA9 /* Resources */,
 				40C9E594274C06CA00F73EA9 /* Sources */,
-				40C9E591274C06B100F73EA9 /* Model */,
 			);
 			path = "SOT-iOS";
-			sourceTree = "<group>";
-		};
-		40C9E591274C06B100F73EA9 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		40C9E592274C06B700F73EA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40CC7172274D77E600872CE1 /* Font */,
 				A8D856D3274C1602006E61DC /* Extensions */,
 				40C9E586274C060D00F73EA9 /* Assets.xcassets */,
-				40F284B5274CDD2400986F33 /* UIColorExtension.swift */,
-				40F284B7274CDEB900986F33 /* UIFontExtension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,13 +137,38 @@
 		40C9E594274C06CA00F73EA9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				40C4FD44274CE6AC009EA8C1 /* UploadVideo */,
 				A866855A274C0B4800D2B9BD /* Network */,
 				A8668559274C0B4200D2B9BD /* Model */,
 				A8668557274C0B2200D2B9BD /* View */,
 				A8668558274C0B3A00D2B9BD /* ViewModel */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		40CC7172274D77E600872CE1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				40CC7174274D77F300872CE1 /* Poppins-Bold.ttf */,
+				40CC7173274D77F300872CE1 /* Poppins-Medium.ttf */,
+				40CC7175274D77F300872CE1 /* Poppins-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		40CC7179274D789D00872CE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40C4FD48274CEF6B009EA8C1 /* MediaPlayerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		40CC717A274D78A200872CE1 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				40B97030274D478800DD6DF2 /* CameraManager.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		6D5C013A441D936876B022E0 /* Frameworks */ = {
@@ -170,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				A866855B274C0B6B00D2B9BD /* Home */,
+				40C4FD44274CE6AC009EA8C1 /* UploadVideo */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +259,8 @@
 		A8D856D3274C1602006E61DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				40F284B5274CDD2400986F33 /* UIColorExtension.swift */,
+				40F284B7274CDEB900986F33 /* UIFontExtension.swift */,
 				A8D856D4274C1623006E61DC /* AVPlayerExtension.swift */,
 			);
 			path = Extensions;
@@ -317,8 +342,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40CC7176274D77F300872CE1 /* Poppins-Medium.ttf in Resources */,
 				40C9E58A274C060D00F73EA9 /* LaunchScreen.storyboard in Resources */,
 				40C9E587274C060D00F73EA9 /* Assets.xcassets in Resources */,
+				40CC7177274D77F300872CE1 /* Poppins-Bold.ttf in Resources */,
+				40CC7178274D77F300872CE1 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

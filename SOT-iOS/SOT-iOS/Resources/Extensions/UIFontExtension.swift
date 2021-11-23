@@ -8,7 +8,7 @@
 import UIKit
 
 enum FontType {
-    case SDBold, SDMed, SDReg
+    case SDBold, SDMed, SDReg, PPBold, PPMed, PPReg
 }
 
 extension UIFont {
@@ -21,6 +21,12 @@ extension UIFont {
             fontName = "AppleSDGothicNeo-Medium"
         case .SDReg:
             fontName = "AppleSDGothicNeo-Regular"
+        case .PPBold:
+            fontName = "Poppins-Bold"
+        case .PPMed:
+            fontName = "Poppins-Medium"
+        case .PPReg:
+            fontName = "Poppins-Regular"
         }
         
         return UIFont(name: fontName, size: size) ?? UIFont.systemFont(ofSize: size)
