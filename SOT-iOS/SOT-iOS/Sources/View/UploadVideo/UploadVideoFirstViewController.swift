@@ -113,11 +113,11 @@ class UploadVideoFirstViewController: UIViewController {
             $0.top.equalTo(locationLabel.snp.bottom).offset(16)
         }
         
-        locationTextField.addSubview(clearBtn)
+        view.addSubview(clearBtn)
         clearBtn.snp.makeConstraints {
             $0.width.height.equalTo(24)
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(16)
+            $0.centerY.equalTo(locationTextField)
+            $0.trailing.equalTo(locationTextField.snp.trailing).inset(16)
         }
         
         view.addSubview(categoryLabel)
