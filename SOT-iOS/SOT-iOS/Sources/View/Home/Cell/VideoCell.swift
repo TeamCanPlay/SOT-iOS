@@ -20,7 +20,38 @@ class VideoCell: UICollectionViewCell {
         $0.backgroundColor = .black
     }
     
+    var topGraView = UILabel().then{
+        $0.frame = CGRect(x: 0, y: 0, width: 450, height: 148)
+    }
+    
+    var bottomGraView = UILabel().then{
+        $0.frame = CGRect(x: 0, y: 0, width: 450, height: 220)
+    }
+    
+    lazy var topGradient = CAGradientLayer().then{
+        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+                        ]
+        $0.locations = [0, 0.5, 1]
+        $0.bounds = self.topGraView.bounds
+        $0.position = topGraView.center
+    }
+    
+    lazy var bottomGradient = CAGradientLayer().then{
+        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+                        ]
+        $0.locations = [0, 0.5, 1]
+        $0.startPoint = CGPoint(x: 0.5, y: 1)
+        $0.endPoint = CGPoint(x: 0.5, y: 0)
+        $0.bounds = self.topGraView.bounds
+        $0.position = topGraView.center
+    }
+    
     let profileImageView = UIImageView().then{
+        $0.image = UIImage(named: "profile_test")
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 40 / 2
@@ -85,6 +116,7 @@ class VideoCell: UICollectionViewCell {
         $0.tintColor = .white
         $0.isSelected = false
         $0.addTarget(self, action: #selector(playBtnPressed(_:)), for: .touchUpInside)
+        $0.isHidden = true
     }
     
     lazy var lookAroundBtn = UIButton().then{
@@ -95,6 +127,12 @@ class VideoCell: UICollectionViewCell {
         $0.setImage(UIImage(named: "rightArrow"), for: .normal)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         $0.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+    }
+    
+    lazy var blurView = UIImageView().then{
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+        visualEffectView.frame = self.contentView.frame
+        $0.addSubview(visualEffectView)
     }
     
     //MARK: - Life Cycle
@@ -137,6 +175,7 @@ class VideoCell: UICollectionViewCell {
         guard let player = playerView.player else { return }
         if player.isPlaying {
             player.pause()
+            self.playButton.isHidden = false
             self.playButton.isSelected = true
         }else{
             player.play()
@@ -146,6 +185,8 @@ class VideoCell: UICollectionViewCell {
     
     func setUI(){
         self.contentView.addSubview(playerView)
+        self.contentView.addSubview(topGraView)
+        self.contentView.addSubview(bottomGraView)
         self.contentView.addSubview(playButton)
         self.contentView.addSubview(profileImageView)
         self.contentView.addSubview(nicknameLabel)
@@ -158,15 +199,27 @@ class VideoCell: UICollectionViewCell {
         self.contentView.addSubview(commentLabel)
         self.contentView.addSubview(shareBtn)
         self.contentView.addSubview(lookAroundBtn)
+        topGraView.layer.addSublayer(topGradient)
+        bottomGraView.layer.addSublayer(bottomGradient)
         
         playerView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
         
         profileImageView.snp.makeConstraints{
-            $0.top.equalTo(self.contentView.safeAreaLayoutGuide).offset(10.0)
+            $0.top.equalToSuperview().offset(56.0)
             $0.leading.equalTo(self.contentView.safeAreaLayoutGuide).offset(20.0)
             $0.width.height.equalTo(40.0)
+        }
+        
+        topGraView.snp.makeConstraints{
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(topGraView.snp.width).multipliedBy(0.39466666666)
+        }
+        
+        bottomGraView.snp.makeConstraints{
+            $0.leading.trailing.bottom.equalToSuperview()
+            $0.height.equalTo(bottomGraView.snp.width).multipliedBy(0.39466666666)
         }
         
         nicknameLabel.snp.makeConstraints{
@@ -180,7 +233,7 @@ class VideoCell: UICollectionViewCell {
         }
         
         contentLabel.snp.makeConstraints{
-            $0.top.equalTo(locationLabel.snp.bottom).offset(9.0)
+            $0.top.equalTo(locationLabel.snp.bottom).offset(6.0)
             $0.leading.equalTo(profileImageView.snp.trailing).offset(8.0)
         }
         
@@ -203,17 +256,17 @@ class VideoCell: UICollectionViewCell {
         commentBtn.snp.makeConstraints{
             $0.top.equalTo(likeLabel.snp.bottom).offset(16.0)
             $0.centerX.equalTo(likeBtn.snp.centerX)
-            $0.centerY.equalTo(self.contentView.snp.centerY).multipliedBy(1.5)
             $0.width.height.equalTo(24.0)
         }
         
         commentLabel.snp.makeConstraints{
             $0.top.equalTo(commentBtn.snp.bottom).offset(3.0)
+            $0.bottom.equalTo(shareBtn.snp.top).offset(-16.0)
             $0.centerX.equalTo(likeBtn.snp.centerX)
         }
         
         shareBtn.snp.makeConstraints{
-            $0.top.equalTo(commentLabel.snp.bottom).offset(16.0)
+            $0.bottom.equalTo(lookAroundBtn.snp.top).offset(-42.0)
             $0.centerX.equalTo(likeBtn.snp.centerX)
         }
         
@@ -224,9 +277,9 @@ class VideoCell: UICollectionViewCell {
         
         lookAroundBtn.snp.makeConstraints{
             $0.centerX.equalTo(self.contentView.snp.centerX)
-            $0.bottom.equalTo(self.contentView.safeAreaLayoutGuide).offset(-32.0)
+            $0.bottom.equalTo(playerView.snp.bottom).offset(-120.0)
             $0.width.equalTo(256.0)
-            $0.height.equalTo(36.0)
+            $0.height.equalTo(44.0)
         }
     }
 }

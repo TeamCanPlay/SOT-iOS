@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .black
         
         setUI()
         setBind()
@@ -46,6 +46,11 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(true)
         
         homeViewModel.requestActivityVideos()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
     }
     
     //MARK: - Functions
@@ -93,7 +98,7 @@ extension HomeViewController: UICollectionViewDelegate{
         let playerItem = AVPlayerItem(url: url) // item 생성
         let queuePlayer = AVQueuePlayer(playerItem: playerItem) //queue player 생성
         
-        playerItem.preferredForwardBufferDuration = TimeInterval(1.0)
+        playerItem.preferredForwardBufferDuration = TimeInterval(0.5)
         cell.playerView.player = queuePlayer
         cell.playerView.playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
         cell.playerView.player?.play()
