@@ -55,6 +55,9 @@ class TabbarViewController: UITabBarController {
         $0.navigationItem.largeTitleDisplayMode = .always
     }
     
+    let blackOpaImage = UIImage(named: "blackOpa400")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -67,6 +70,7 @@ class TabbarViewController: UITabBarController {
         tabBar.isTranslucent = true
         tabBar.tintColor = UIColor.white
         tabBar.barTintColor = .black
+        tabBar.backgroundImage = blackOpaImage
         tabBar.unselectedItemTintColor = UIColor.white
         UITabBar.appearance().shadowImage = UIImage() // tabbar shadow 지우기
         //        tabBar.barStyle = .black
