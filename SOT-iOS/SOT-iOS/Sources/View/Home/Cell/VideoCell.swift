@@ -11,6 +11,8 @@ import Then
 import AVKit
 
 class VideoCell: UICollectionViewCell {
+    //MARK: - Properties
+    
     //MARK: - Properies
     static let identifier: String = "videoCell"
     var viewModel: HomeViewModelProtocol?
@@ -29,8 +31,8 @@ class VideoCell: UICollectionViewCell {
     }
     
     lazy var topGradient = CAGradientLayer().then{
-        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.6).cgColor,
-                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor,
+        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor,
                          UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
                         ]
         $0.locations = [0, 0.5, 1]
@@ -39,8 +41,8 @@ class VideoCell: UICollectionViewCell {
     }
     
     lazy var bottomGradient = CAGradientLayer().then{
-        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor,
-                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor,
+        $0.colors = [UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor,
+                         UIColor(red: 0, green: 0, blue: 0, alpha: 0.2).cgColor,
                          UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
                         ]
         $0.locations = [0, 0.5, 1]
@@ -57,54 +59,99 @@ class VideoCell: UICollectionViewCell {
         $0.layer.cornerRadius = 40 / 2
     }
     
-    let nicknameLabel = UILabel().then{
+    lazy var nicknameLabel = UILabel().then{
         $0.font = UIFont.boldSystemFont(ofSize: 17)
         $0.text = "nickname label"
         $0.textColor = .white
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
     }
     
     let locationLabel = UILabel().then{
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.text = "location label"
         $0.textColor = .white
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
     }
     
     let contentLabel = UILabel().then{
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.text = "Content Label test hahahhahaha"
         $0.textColor = .white
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
     }
     
     lazy var moreBtn = UIButton().then{
         $0.setBackgroundImage(UIImage(named: "more"), for: .normal)
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.addTarget(self, action: #selector(moreBtnPressed(_:)), for: .touchUpInside)
     }
     
     lazy var likeBtn = UIButton().then{
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.setBackgroundImage(UIImage(named: "like"), for: .normal)
         $0.tag = 0
         $0.addTarget(self, action: #selector(btnBarPressed(_:)), for: .touchUpInside)
     }
     
     let likeLabel = UILabel().then{
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.textColor = .white
         $0.text = "12.4K"
     }
     
     let commentLabel = UILabel().then{
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.font = UIFont.boldSystemFont(ofSize: 14)
         $0.textColor = .white
         $0.text = "12.4K"
     }
 
     lazy var commentBtn = UIButton().then{
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.setBackgroundImage(UIImage(named: "comment"), for: .normal)
         $0.tag = 1
         $0.addTarget(self, action: #selector(btnBarPressed(_:)), for: .touchUpInside)
     }
     
     lazy var shareBtn = UIButton().then{
+        $0.layer.shadowColor = UIColor.black.cgColor
+        $0.layer.shadowRadius = 2.0
+        $0.layer.shadowOpacity = 1.0
+        $0.layer.shadowOffset = CGSize(width: 1, height: 0)
+        $0.layer.shouldRasterize = true
         $0.setBackgroundImage(UIImage(named: "share"), for: .normal)
         $0.tag = 2
         $0.addTarget(self, action: #selector(btnBarPressed(_:)), for: .touchUpInside)
@@ -120,13 +167,16 @@ class VideoCell: UICollectionViewCell {
     }
     
     lazy var lookAroundBtn = UIButton().then{
-        $0.layer.cornerRadius = 20.0
+        $0.layer.cornerRadius = 22.0
         $0.layer.borderWidth = 2.0
         $0.layer.borderColor = UIColor.white.cgColor
         $0.setTitle("액티비티 둘러보기", for: .normal)
         $0.setImage(UIImage(named: "rightArrow"), for: .normal)
         $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        $0.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+        $0.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        $0.semanticContentAttribute = .forceRightToLeft
+        $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: -10.0)
+        $0.imageEdgeInsets = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: -22)
     }
     
     lazy var blurView = UIImageView().then{
@@ -182,7 +232,7 @@ class VideoCell: UICollectionViewCell {
             self.playButton.isSelected = false
         }
     }
-    
+  
     func setUI(){
         self.contentView.addSubview(playerView)
         self.contentView.addSubview(topGraView)

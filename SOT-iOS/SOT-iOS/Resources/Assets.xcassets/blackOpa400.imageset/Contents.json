@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "profile_on.png",
+      "filename" : "blackOp400.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "profile_on@2x.png",
+      "filename" : "blackOp400@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "profile_on@3x.png",
+      "filename" : "blackOp400@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
