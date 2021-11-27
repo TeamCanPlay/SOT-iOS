@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     class SOTColor: UIColor {
-        static let sotPurple = UIColor(red: 206/255, green: 113/255, blue: 244/255, alpha: 1)
+        static let sotPurple = UIColor(red: 147/255, green: 71/255, blue: 255/255, alpha: 1)
         
         static let sotBlue = UIColor(red: 20/255, green: 185/255, blue: 255/255, alpha: 1)
         

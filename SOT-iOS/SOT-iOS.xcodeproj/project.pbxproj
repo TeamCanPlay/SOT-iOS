@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3930EA799056B99699750013 /* Pods_SOT_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */; };
+		404D4E352752869B004D7154 /* CategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D4E342752869B004D7154 /* CategoryDataModel.swift */; };
+		404D4E38275286F1004D7154 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D4E37275286F1004D7154 /* CategoryCollectionViewCell.swift */; };
 		40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */; };
 		40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */; };
 		40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B97030274D478800DD6DF2 /* CameraManager.swift */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		206B3783D193D1EC934456E0 /* Pods_SOT_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SOT_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21189228B6651EB8C801BEB2 /* Pods-SOT-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOT-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SOT-iOS/Pods-SOT-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		404D4E342752869B004D7154 /* CategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataModel.swift; sourceTree = "<group>"; };
+		404D4E37275286F1004D7154 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoFirstViewController.swift; sourceTree = "<group>"; };
 		40B2A786274CE30400670795 /* UploadVideoSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadVideoSecondViewController.swift; sourceTree = "<group>"; };
 		40B97030274D478800DD6DF2 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
@@ -76,9 +80,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404D4E3327528682004D7154 /* UploadVideo */ = {
+			isa = PBXGroup;
+			children = (
+				404D4E342752869B004D7154 /* CategoryDataModel.swift */,
+			);
+			path = UploadVideo;
+			sourceTree = "<group>";
+		};
+		404D4E36275286DE004D7154 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				404D4E37275286F1004D7154 /* CategoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		40C4FD44274CE6AC009EA8C1 /* UploadVideo */ = {
 			isa = PBXGroup;
 			children = (
+				404D4E36275286DE004D7154 /* Cell */,
 				40CC717A274D78A200872CE1 /* Class */,
 				40CC7179274D789D00872CE1 /* View */,
 				40B2A784274CE00B00670795 /* UploadVideoFirstViewController.swift */,
@@ -221,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D856DD274C318F006E61DC /* Home */,
+				404D4E3327528682004D7154 /* UploadVideo */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +438,7 @@
 				40B2A787274CE30400670795 /* UploadVideoSecondViewController.swift in Sources */,
 				40B2A785274CE00B00670795 /* UploadVideoFirstViewController.swift in Sources */,
 				40C4FD49274CEF6B009EA8C1 /* MediaPlayerView.swift in Sources */,
+				404D4E352752869B004D7154 /* CategoryDataModel.swift in Sources */,
 				40F284B6274CDD2400986F33 /* UIColorExtension.swift in Sources */,
 				40B97031274D478800DD6DF2 /* CameraManager.swift in Sources */,
 				A8560788275205E300EAE817 /* TabbarViewController.swift in Sources */,
@@ -425,6 +448,7 @@
 				A8D856D5274C1623006E61DC /* AVPlayerExtension.swift in Sources */,
 				A8D856DC274C2EA6006E61DC /* VideoAPIManager.swift in Sources */,
 				A8D856E3274C37E6006E61DC /* VideoCell.swift in Sources */,
+				404D4E38275286F1004D7154 /* CategoryCollectionViewCell.swift in Sources */,
 				40C9E57E274C060B00F73EA9 /* AppDelegate.swift in Sources */,
 				40C9E580274C060B00F73EA9 /* SceneDelegate.swift in Sources */,
 				A8D856D2274C0F1B006E61DC /* PlayerView.swift in Sources */,
