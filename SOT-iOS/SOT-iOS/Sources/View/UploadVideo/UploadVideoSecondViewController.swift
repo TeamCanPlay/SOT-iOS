@@ -20,9 +20,9 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
     
     //MARK:- UI Components
     
-    private let closeBtn = UIButton().then {
-        $0.setImage(UIImage(named: "closeBtnImg"), for: .normal)
-        $0.addTarget(self, action: #selector(closeBtnAction), for: .touchUpInside)
+    private let backBtn = UIButton().then {
+        $0.setImage(UIImage(named: "backBtnImg"), for: .normal)
+        $0.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
     }
     
     private let nextBtn = UIButton().then {
@@ -57,12 +57,24 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
         $0.addTarget(self, action: #selector(recordingBtnAction), for: .touchUpInside)
     }
     
+    private let recordingStopView = UIView().then {
+        $0.backgroundColor = .red
+        $0.layer.cornerRadius = 28
+        $0.isUserInteractionEnabled = false
+        $0.isHidden = true
+    }
+    
     
     //MARK:- Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
     }
     
     //MARK:- Functions
@@ -114,7 +126,7 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentTapGestureAction))
             playerView?.addGestureRecognizer(tapGesture)
             view.addSubview(playerView!)
-            view.bringSubviewToFront(closeBtn)
+            view.bringSubviewToFront(backBtn)
             view.bringSubviewToFront(nextBtn)
             view.bringSubviewToFront(galaryAndMusicBtn)
             view.bringSubviewToFront(turnAndSoundBtn)
@@ -125,6 +137,7 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
     }
     
     private func setUI() {
+        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .black
         
         view.addSubview(preView)
@@ -132,8 +145,8 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             $0.edges.equalToSuperview()
         }
         
-        view.addSubview(closeBtn)
-        closeBtn.snp.makeConstraints {
+        view.addSubview(backBtn)
+        backBtn.snp.makeConstraints {
             $0.width.height.equalTo(24)
             $0.top.equalToSuperview().offset(54)
             $0.leading.equalToSuperview().offset(20)
@@ -166,6 +179,12 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             $0.bottom.equalToSuperview().offset(-62)
         }
         
+        recordingBtn.addSubview(recordingStopView)
+        recordingStopView.snp.makeConstraints {
+            $0.width.height.equalTo(56)
+            $0.centerX.centerY.equalToSuperview()
+        }
+        
         view.addSubview(turnAndSoundBtn)
         turnAndSoundBtn.snp.makeConstraints {
             $0.width.height.equalTo(24)
@@ -190,16 +209,18 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             galaryAndMusicBtn.setImage(UIImage(named: "galaryBtnImg"), for: .normal)
             turnAndSoundBtn.setImage(UIImage(named: "turnBtnImg"), for: .normal)
             nextBtn.alpha = 0.5
+            recordingStopView.isHidden = false
         case true:
             recordingStatus.toggle()
             cameraManager.stopRecording()
             galaryAndMusicBtn.setImage(UIImage(named: "musicBtnImg"), for: .normal)
             turnAndSoundBtn.setImage(UIImage(named: "soundBtnImg"), for: .normal)
             nextBtn.alpha = 1
+            recordingStopView.isHidden = true
         }
     }
     
-    @objc func closeBtnAction() {
+    @objc func backBtnAction() {
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -15,6 +15,7 @@ class UploadVideoFirstViewController: UIViewController {
     
     private let closeBtn = UIButton().then {
         $0.setImage(UIImage(named: "closeBtnImg"), for: .normal)
+        $0.addTarget(self, action: #selector(closeBtnAction), for: .touchUpInside)
     }
     
     private let nextBtn = UIButton().then {
@@ -42,9 +43,12 @@ class UploadVideoFirstViewController: UIViewController {
         $0.layer.cornerRadius = 16
         
         $0.textColor = .white
-        $0.attributedPlaceholder = NSAttributedString(string: "액티비티 장소를 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
-        
-        $0.clearButtonMode = .always
+        $0.attributedPlaceholder = NSAttributedString(string: "도시를 입력해주세요.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
+    }
+    
+    private let clearBtn = UIButton().then {
+        $0.setImage(UIImage(named: "clearBtnImg"), for: .normal)
+        $0.addTarget(self, action: #selector(clearBtnAction), for: .touchUpInside)
     }
     
     private let categoryLabel = UILabel().then {
@@ -59,6 +63,12 @@ class UploadVideoFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
     }
     
     //MARK:- Functions
@@ -87,6 +97,13 @@ class UploadVideoFirstViewController: UIViewController {
             $0.top.equalTo(locationLabel.snp.bottom).offset(16)
         }
         
+        locationTextField.addSubview(clearBtn)
+        clearBtn.snp.makeConstraints {
+            $0.width.height.equalTo(24)
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(16)
+        }
+        
         view.addSubview(categoryLabel)
         categoryLabel.snp.makeConstraints {
             $0.height.equalTo(19)
@@ -104,5 +121,13 @@ class UploadVideoFirstViewController: UIViewController {
     
     @objc func goToNextVC() {
         self.navigationController?.pushViewController(UploadVideoSecondViewController(), animated: true)
+    }
+    
+    @objc func clearBtnAction() {
+        self.locationTextField.text = ""
+    }
+    
+    @objc func closeBtnAction() {
+        self.tabBarController?.selectedIndex = 0
     }
 }

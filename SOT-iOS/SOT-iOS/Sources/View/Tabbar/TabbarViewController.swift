@@ -29,7 +29,7 @@ class TabbarViewController: UITabBarController {
         $0.navigationItem.largeTitleDisplayMode = .always
     }
     
-    lazy var uploadVC = UploadVideoSecondViewController().then{
+    lazy var uploadVC = UploadVideoFirstViewController().then{
         $0.tabBarItem = UITabBarItem(title: "",
                                      image: UIImage(named: "upload"),
                                      selectedImage: UIImage(named: "upload")?.withRenderingMode(.alwaysOriginal))

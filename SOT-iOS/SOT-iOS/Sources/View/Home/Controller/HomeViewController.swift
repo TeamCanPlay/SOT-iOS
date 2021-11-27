@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        tabBarController?.tabBar.isHidden = false
         homeViewModel.requestActivityVideos()
     }
     
@@ -88,7 +88,6 @@ extension HomeViewController: UICollectionViewDataSource{
 
 extension HomeViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print("will display ------------")
         guard let cell = cell as? VideoCell else { return }
 
         let videoURL = homeViewModel.videos.value[indexPath.row].videoUrl
@@ -106,7 +105,6 @@ extension HomeViewController: UICollectionViewDelegate{
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        print("did display ------------")
         guard let cell = cell as? VideoCell else { return }
         
         cell.playerView.player?.pause()
