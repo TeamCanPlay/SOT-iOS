@@ -27,6 +27,7 @@ class UploadVideoFirstViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = UIFont.SOTFont(type: .SDMed, size: 14)
         $0.alpha = 0.5
+        $0.isEnabled = false
         $0.addTarget(self, action: #selector(goToNextVC), for: .touchUpInside)
     }
     
@@ -167,6 +168,7 @@ class UploadVideoFirstViewController: UIViewController {
         viewModel.output.nextButtonEnable
             .drive(onNext: { status in
                 self.nextBtn.alpha = status ? 1 : 0.5
+                self.nextBtn.isEnabled = status
             })
             .disposed(by: disposeBag)
     }
