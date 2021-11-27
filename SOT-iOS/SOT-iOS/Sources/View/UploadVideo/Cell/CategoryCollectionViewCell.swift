@@ -17,7 +17,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             self.titleLabel.textColor = isSelected ? UIColor.white.withAlphaComponent(1) : UIColor.white.withAlphaComponent(0.5)
-            self.contentView.backgroundColor = isSelected ? UIColor.SOTColor.sotPurple.withAlphaComponent(1) : UIColor.SOTColor.sotPurple.withAlphaComponent(0.5)
+            self.backgroundColor = isSelected ? UIColor.SOTColor.sotPurple.withAlphaComponent(1) : UIColor.SOTColor.sotPurple.withAlphaComponent(0.5)
         }
     }
     

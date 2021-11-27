@@ -19,7 +19,7 @@ protocol HomeViewModelProtocol{
 class HomeViewModel: HomeViewModelProtocol {
     //MARK: - Properties
     private let videoApiManager = VideoAPIManager.shared
-    var videos: Observable<[Video]> = Observable(value: [])
+    var videos: ObservableT<[Video]> = ObservableT(value: [])
     
     //MARK: - Functions
     

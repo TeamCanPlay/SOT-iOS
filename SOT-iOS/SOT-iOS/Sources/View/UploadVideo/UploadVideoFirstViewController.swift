@@ -6,18 +6,14 @@
 //
 
 import UIKit
-import SnapKit
-import Then
+import RxSwift
 
 class UploadVideoFirstViewController: UIViewController {
     
     //MARK:- Properties
-    private let categoryList: [CategoryDataModel] = [
-        CategoryDataModel(title: "육상 액티비티"),
-        CategoryDataModel(title: "수상 액티비티"),
-        CategoryDataModel(title: "항공 액티비티"),
-        CategoryDataModel(title: "기타")
-    ]
+    
+    private lazy var viewModel = UploadVideoFirstViewModel()
+    private let disposeBag = DisposeBag()
     
     //MARK:- UI Components
     
@@ -72,12 +68,23 @@ class UploadVideoFirstViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setCollectionView()
+        binding()
+        bindingCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        clearView()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
     
     //MARK:- Functions
@@ -144,9 +151,45 @@ class UploadVideoFirstViewController: UIViewController {
         categoryCV.backgroundColor = .black
         categoryCV.showsHorizontalScrollIndicator = false
         categoryCV.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
+    }
+    
+    private func binding() {
+        locationTextField.rx.text
+            .bind(to: self.viewModel.input.locationInput)
+            .disposed(by: disposeBag)
         
-        categoryCV.delegate = self
-        categoryCV.dataSource = self
+        categoryCV.rx.modelSelected(CategoryDataModel.self)
+            .bind(onNext: { model in
+                self.viewModel.input.categorySelectInput.onNext(model.title)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.output.nextButtonEnable
+            .drive(onNext: { status in
+                self.nextBtn.alpha = status ? 1 : 0.5
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindingCollectionView() {
+        categoryCV.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        viewModel.output.categoryListData
+            .bind(to: categoryCV.rx.items) { (cv, row, item) -> UICollectionViewCell in
+                if let cell = self.categoryCV.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: IndexPath.init(row: row, section: 0)) as? CategoryCollectionViewCell {
+                    cell.setData(model: item)
+                    return cell
+                }
+                return UICollectionViewCell()
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func clearView() {
+        locationTextField.text = ""
+        categoryCV.allowsSelection = false
+        categoryCV.allowsSelection = true
+        view.endEditing(true)
     }
     
     @objc func goToNextVC() {
@@ -159,19 +202,6 @@ class UploadVideoFirstViewController: UIViewController {
     
     @objc func closeBtnAction() {
         self.tabBarController?.selectedIndex = 0
-    }
-}
-
-extension UploadVideoFirstViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell  else { return UICollectionViewCell() }
-        cell.setData(model: categoryList[indexPath.row])
-        cell.alpha = 0.5
-        return cell
     }
 }
 

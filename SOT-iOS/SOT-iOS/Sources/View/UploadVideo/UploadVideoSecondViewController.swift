@@ -30,6 +30,8 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = UIFont.SOTFont(type: .SDMed, size: 14)
         $0.alpha = 0.5
+        $0.isEnabled = false
+        $0.addTarget(self, action: #selector(nextBtnAction), for: .touchUpInside)
     }
     
     private let centerPlayBtn = UIImageView().then {
@@ -207,7 +209,7 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
     }
     
     private func pauseVideo() {
-        let presentView = self.view.viewWithTag(1) as! MediaPlayerView
+        guard let presentView = self.view.viewWithTag(1) as? MediaPlayerView else { return }
         presentView.pause()
     }
     
@@ -226,12 +228,17 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             galaryAndMusicBtn.setImage(UIImage(named: "musicBtnImg"), for: .normal)
             turnAndSoundBtn.setImage(UIImage(named: "soundBtnImg"), for: .normal)
             nextBtn.alpha = 1
+            nextBtn.isEnabled = true
             recordingStopView.isHidden = true
         }
     }
     
     @objc func backBtnAction() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func nextBtnAction() {
+        self.navigationController?.pushViewController(UploadVideoFinalViewController(), animated: true)
     }
     
     @objc func presentTapGestureAction() {

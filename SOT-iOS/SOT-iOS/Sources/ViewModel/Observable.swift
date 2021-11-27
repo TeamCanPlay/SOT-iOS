@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Observable<T> {
+class ObservableT<T> {
     var listener: ((T) -> Void)?
     
     var value: T {
