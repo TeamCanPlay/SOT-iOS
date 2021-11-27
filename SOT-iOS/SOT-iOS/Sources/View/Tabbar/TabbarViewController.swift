@@ -20,7 +20,7 @@ class TabbarViewController: UITabBarController {
         $0.navigationItem.largeTitleDisplayMode = .always
     }
     
-    lazy var searchVC = UploadVideoSecondViewController().then{
+    lazy var searchVC = UploadVideoFirstViewController().then{
         $0.tabBarItem = UITabBarItem(title: "검색",
                                      image: UIImage(named: "search_off"),
                                      selectedImage: UIImage(named: "search_on")?.withRenderingMode(.alwaysOriginal))
@@ -37,7 +37,7 @@ class TabbarViewController: UITabBarController {
         $0.navigationItem.largeTitleDisplayMode = .always
     }
     
-    lazy var accompanyVC = UploadVideoSecondViewController().then{
+    lazy var accompanyVC = UploadVideoFirstViewController().then{
         $0.tabBarItem = UITabBarItem(title: "동행",
                                      image: UIImage(named: "list_off"),
                                      selectedImage: UIImage(named: "list_on")?.withRenderingMode(.alwaysOriginal))
@@ -46,7 +46,7 @@ class TabbarViewController: UITabBarController {
         $0.navigationItem.largeTitleDisplayMode = .always
     }
     
-    lazy var profileVC = UploadVideoSecondViewController().then{
+    lazy var profileVC = UploadVideoFirstViewController().then{
         $0.tabBarItem = UITabBarItem(title: "프로필",
                                      image: UIImage(named: "profile_off"),
                                      selectedImage: UIImage(named: "profile_on")?.withRenderingMode(.alwaysOriginal))
