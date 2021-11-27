@@ -77,6 +77,11 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
         tabBarController?.tabBar.isHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        pauseVideo()
+    }
+    
     //MARK:- Functions
     
     private func setupView() {
@@ -199,6 +204,11 @@ class UploadVideoSecondViewController: UIViewController, RecordingDelegate {
             $0.leading.equalTo(galaryAndMusicBtn.snp.trailing).offset(38)
             $0.trailing.equalTo(turnAndSoundBtn.snp.leading).offset(-37)
         }
+    }
+    
+    private func pauseVideo() {
+        let presentView = self.view.viewWithTag(1) as! MediaPlayerView
+        presentView.pause()
     }
     
     @objc func recordingBtnAction() {

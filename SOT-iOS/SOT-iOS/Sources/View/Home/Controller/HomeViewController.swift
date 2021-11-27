@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     //MARK: - Properties
 
     let homeViewModel = HomeViewModel()
+    private var videoIndex: VideoCell?
     
     //MARK: - UI Components
     
@@ -50,24 +51,28 @@ class HomeViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        
+        pauseVideo()
     }
     
     //MARK: - Functions
 
-    func setBind(){
+    private func setBind(){
         homeViewModel.videos.bind { videos in
             self.collectionView.reloadData()
         }
     }
     
     
-    func setUI(){
+    private func setUI(){
         self.view.addSubview(collectionView)
         
         collectionView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
+    }
+    
+    private func pauseVideo() {
+        videoIndex?.playerView.player?.pause()
     }
 }
 
@@ -98,6 +103,7 @@ extension HomeViewController: UICollectionViewDelegate{
         let queuePlayer = AVQueuePlayer(playerItem: playerItem) //queue player 생성
         
         playerItem.preferredForwardBufferDuration = TimeInterval(0.5)
+        videoIndex = cell
         cell.playerView.player = queuePlayer
         cell.playerView.playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
         cell.playerView.player?.play()
