@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/70688424/143689934-5e839b87-cb2b-4868-8ec8-f11d4a33615e.png" width="800px" />
 </p>
 
-<h1 align="center">일상 속 여행의 시작점, SOT (Sharing Of Trip)</h2>
+<h1 align="center">일상 속 여행의 시작점, SOT (Start Of a Trip)</h2>
 
 <h3 align="center">[원티드] 채용 연계형 대규모 해커톤 해, 커리어 - Team 놀 줄 아는 팀<br>2021.10.31 ~ ing</h4>
 
